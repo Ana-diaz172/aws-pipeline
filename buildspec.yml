@@ -1,0 +1,19 @@
+    version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 12
+    commands:
+      - echo "Starting install Phase..."
+  pre_build:
+    commands:
+      - echo "Starting pre_build Phase..."
+  build:
+    commands:
+      - echo "Starting build Phase..."
+      - echo "Execute test for CumulusCycles in HTML file"
+      - grep -Fq "CumulusCycles" index.html
+  post_build:
+    commands:
+      - echo "Starting post_build Phase..."
